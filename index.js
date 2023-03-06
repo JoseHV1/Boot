@@ -1,15 +1,18 @@
+import * as dotenv from "dotenv";
+dotenv.config();
 import express from "express";
 import request from "request";
 
 const app = express();
+const port = process.env.PORT || 3000;
 
 app.use(express.urlencoded({ "extended": true }));
 
 app.use('/', (req, res) => {
-    res.send("holas");
+    res.send("Funcionando :)");
 });
 
-app.listen(3000, () => {
+app.listen(port, () => {
     console.log("Run Server")
 });
 
