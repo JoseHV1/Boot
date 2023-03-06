@@ -8,9 +8,9 @@ const port = process.env.PORT || 3000;
 
 app.use(express.urlencoded({ "extended": true }));
 
-app.use('/', (req, res) => {
-    res.send("Funcionando :)");
-});
+// app.use('/', (req, res) => {
+//     res.send("Funcionando :)");
+// });
 
 app.listen(port, () => {
     console.log("Run Server")
